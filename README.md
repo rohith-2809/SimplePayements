@@ -59,19 +59,31 @@ All ledger data is stored under the key `payments_v1` using the **Web Storage AP
 
 ---
 
-## Use Case Diagram
+## flow Diagram
 ```mermaid
-usecaseDiagram
-    actor User
-    User --> (Record Transaction)
-    User --> (Select Category)
-    User --> (Set Payment Mode)
-    User --> (Delete Transaction)
-    User --> (Clear All History)
-    User --> (Export as PDF)
-    User --> (Export as Excel)
-    User --> (View Real-time Stats)
-    (Record Transaction) ..> (Input Validation) : include
+flowchart LR
+    User((User))
+
+    A[Record Transaction]
+    B[Select Category]
+    C[Set Payment Mode]
+    D[Delete Transaction]
+    E[Clear All History]
+    F[Export as PDF]
+    G[Export as Excel]
+    H[View Real-time Stats]
+    I[Input Validation]
+
+    User --> A
+    User --> B
+    User --> C
+    User --> D
+    User --> E
+    User --> F
+    User --> G
+    User --> H
+
+    A --> I
 ```
 
 ---
